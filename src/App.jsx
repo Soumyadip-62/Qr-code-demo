@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import Scanner from './components/Scanner';
-
+import LOGO from './assets/Kolkata_Thunderbolts_official_logo.png'
 
 // import './App.css'
 
@@ -9,8 +9,8 @@ import Scanner from './components/Scanner';
 
 function App() {
   const [count, setCount] = useState(0)
-  const [latitute, setlatitute] = useState(0)
-  const [longtitude, setlongtitude] = useState(0)
+  const [latitute, setlatitute] = useState(null)
+  const [longtitude, setlongtitude] = useState(null)
   const [qr_result, setqr_result] = useState('')
 
   function getLocation (){
@@ -34,22 +34,37 @@ function App() {
 
   return (
     <div>
-      <h1>Location with QR Code example!</h1>
+      <div className="row justify-content-md-center text-center">
+        <img
+          style={{ width: "130px", height: "120px" }}
+          className="col-2"
+          src={LOGO}
+        />
+        <h1 className="col-4">Ball Tracking System</h1>
+      </div>
+
       <Scanner
         fps={10}
         qrbox={250}
         disableFlip={false}
         qrCodeSuccessCallback={onNewScanResult}
       />
+      <div className="row justify-content-md-center">
+        <div className="col text-center">
+          {qr_result && (
+            <h2>
+              Scanned Result :<span className="scanned"> {qr_result}</span>
+            </h2>
+          )}
+        </div>
 
-      <div>
-      {qr_result&&  <h2>Scanned Result : {qr_result}</h2>}
-      </div>
-
-      <div>
-        <h2>your current location is</h2>
-        <p>latitude : {latitute}</p>
-        <p>longtitude : {longtitude}</p>
+        {longtitude && (
+          <div className="col text-center ">
+            <h2>Your Current Location </h2>
+            <h3 className="location">Latitude : {latitute}</h3>
+            <h3 className="location">Longtitude : {longtitude}</h3>
+          </div>
+        )}
       </div>
     </div>
   );

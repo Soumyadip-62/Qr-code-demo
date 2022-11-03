@@ -5,7 +5,7 @@ const qrcodeRegionId = "html5qr-code-full-region";
 
 class Scanner extends React.Component {
   render() {
-    return <div  id={qrcodeRegionId} />;
+    return <div className="w-12" id={qrcodeRegionId} />;
   }
 
   componentWillUnmount() {
