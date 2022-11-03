@@ -1,16 +1,19 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import Scanner from './components/Scanner';
+import Map from './components/Map';
 import LOGO from './assets/Kolkata_Thunderbolts_official_logo.png'
-import { Wrapper, Status } from "@googlemaps/react-wrapper";
+import { MapContainer, Marker, Popup, TileLayer, useMap } from "react-leaflet";
+
+// import { Wrapper, Status } from "@googlemaps/react-wrapper";
 // import { Map, GoogleApiWrapper, Marker } from "google-maps-react";
 
 // import './App.css'
 
-const mapStyles = {
-  width: "100%",
-  height: "100%",
-};
+// const mapStyles = {
+//   width: "100%",
+//   height: "100%",
+// };
 
 function App() {
   const [count, setCount] = useState(0)
@@ -90,11 +93,12 @@ function App() {
           />
         </Map>
       </div> */}
-      <div>
-        <Wrapper apiKey="AIzaSyCJ93bv8-XgalSZ8Pu28r472Lq0ZwCHtuY">
-         
-        </Wrapper>
-      </div>
+      {longtitude && (
+        <div>
+          <h2 className="small-header text-center">Find Yourself In The Map</h2>
+          <Map lat={latitute} long={longtitude} />
+        </div>
+      )}
     </div>
   );
 }

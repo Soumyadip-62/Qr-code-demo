@@ -26,6 +26,8 @@ a:hover {
 
 body {
   margin: 0;
+  width: 100vw;
+  overflow-x: hidden;
   /* overflow-y:hidden; */
     /* font-size: 22px; */
     /* background-color: #0a0a0a; */
@@ -132,3 +134,30 @@ button:focus-visible {
     /* font-variant: small-caps; */
     font-variant-ligatures: common-ligatures;
 }
+#map{
+  width: 100vw;
+  height: 500px;
+}
+
+#mapContainer{
+  padding: 1rem;
+}
+
+#html5qr-code-full-region__camera_permission_button{
+  background: #646cff !important;
+  /* color:crimson; */
+}
+
+#html5qr-code-full-region__dashboard_section_csr>span:nth-child(2)>button:nth-child(1){
+  background: #646cff !important;
+
+  /* color:crimson; */
+
+}
+
+#html5qr-code-full-region__dashboard_section_csr>span:nth-child(2)>button:nth-child(2){
+    background: #646cff !important;
+  /* color:crimson; */
+
+}
+

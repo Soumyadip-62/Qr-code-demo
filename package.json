@@ -12,8 +12,10 @@
     "@googlemaps/react-wrapper": "^1.1.35",
     "google-maps-react": "^2.0.6",
     "html5-qrcode": "^2.2.6",
+    "leaflet": "^1.9.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-leaflet": "^4.1.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.22",
