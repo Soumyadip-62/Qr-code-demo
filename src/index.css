@@ -26,12 +26,11 @@ a:hover {
 
 body {
   margin: 0;
-  font-family: 'Gruppo';
-  overflow: hidden;
+  /* overflow-y:hidden; */
     /* font-size: 22px; */
     /* background-color: #0a0a0a; */
     /* color: azure; */
-   background: rgb(202, 202, 141);
+   /* background: rgb(202, 202, 141); */
     /* background:linear-gradient(90deg, rgba(212, 180, 17, 0.20772058823529416) 32%, rgba(200, 19, 7, 0.26094187675070024) 100%); */ 
 }
 
@@ -76,12 +75,53 @@ button:focus-visible {
 
 .scanned{
   /* font-size: large; */
+  font-family: 'Gruppo';
   color: #535bf2;
   font-weight: bold;
+  display: block;
+  overflow:auto;
 }
 
 .location{
-  color: #535bf2;
-  font-weight: bold;
+  width: 20rem;
+  color: rgb(255, 255, 255);
+  font-weight:normal;
+  font-size: medium;
+  /* font-family: 'Gruppo'; */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-variant: small-caps;
+  font-variant-ligatures: common-ligatures;
+  background-color: #535bf2d7;
+  padding: .8rem;
+    border-radius: 10px;
+    box-shadow: 2px 3px  #000000d3;
+  
   /* font-size: large; */
+}
+.location-wrapper{
+    /* background-color: rgb(240, 184, 30); */
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow:2px 3px 1px 1px #1a1a1a5e;
+}
+
+.main-heading{
+  color: rgb(220, 20, 20);
+  font-family:Georgia, 'Times New Roman', Times, serif ;
+  font-weight: bold;
+  font-variant: small-caps;
+  font-variant-ligatures: common-ligatures;
+}
+
+#result{
+  background: darkkhaki;
+  padding: 5px;
+  border-radius: 25px;
+}
+
+.small-header{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-variant: small-caps;
+    font-variant-ligatures: common-ligatures;
 }
