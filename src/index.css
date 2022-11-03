@@ -100,6 +100,7 @@ button:focus-visible {
 }
 .location-wrapper{
     /* background-color: rgb(240, 184, 30); */
+    width: 20rem  ;
     padding: 1rem;
     border-radius: 10px;
     box-shadow:2px 3px 1px 1px #1a1a1a5e;
