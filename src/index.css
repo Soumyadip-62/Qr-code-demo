@@ -135,7 +135,7 @@ button:focus-visible {
     font-variant-ligatures: common-ligatures;
 }
 #map{
-  width: 100vw;
+  width: 95vw;
   height: 500px;
 }
 
