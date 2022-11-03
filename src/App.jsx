@@ -67,7 +67,7 @@ function App() {
         {longtitude && (
           <div className="col p-4 m-2 location-wrapper">
             <h2 className="small-header">Your Current Location</h2>
-            <div className="">
+            <div className="mt-4">
               <h3 className="location">Latitude : {latitute}</h3>
               <h3 className="location">Longtitude : {longtitude}</h3>
             </div>
