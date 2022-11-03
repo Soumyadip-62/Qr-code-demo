@@ -11,6 +11,7 @@ function App() {
   const [count, setCount] = useState(0)
   const [latitute, setlatitute] = useState(0)
   const [longtitude, setlongtitude] = useState(0)
+  const [qr_result, setqr_result] = useState('')
 
   function getLocation (){
     navigator.geolocation.getCurrentPosition(function (position) {
@@ -26,6 +27,8 @@ function App() {
     // Handle the result here.
     console.log("success");
     console.log(decodedResult);
+
+    setqr_result(decodedText);
      getLocation();
   }
 
@@ -38,6 +41,10 @@ function App() {
         disableFlip={false}
         qrCodeSuccessCallback={onNewScanResult}
       />
+
+      <div>
+      {qr_result&&  <h2>Scanned Result : {qr_result}</h2>}
+      </div>
 
       <div>
         <h2>your current location is</h2>
